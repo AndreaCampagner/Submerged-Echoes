@@ -22,6 +22,19 @@ public class Bathyscaphe : MonoBehaviour {
         Rotate();
     }
 
+    void OnCollisionEnter(Collision collision)
+    {
+        switch (collision.gameObject.tag)
+        {
+            case "Friendly":
+                print("Ok");
+                break;
+            default:
+                print("Dead");
+                break;
+        }
+    }
+
     private void Rotate()
     {
         rigidBody.freezeRotation = true; //Manual control taken
