@@ -68,7 +68,10 @@ public class Bathyscaphe : MonoBehaviour {
     private void LoadNextScene()
     {
         if (current == State.Changing)
-            SceneManager.LoadScene(1);
+        {
+            int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+            SceneManager.LoadScene(currentSceneIndex + 1);
+        }
         else if (current == State.Dead)
             SceneManager.LoadScene(0);
         current = State.Alive;
