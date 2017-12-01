@@ -19,6 +19,8 @@ public class Bathyscaphe : MonoBehaviour {
     [SerializeField] ParticleSystem deathExplosion;
     [SerializeField] ParticleSystem success;
 
+    private int keyCount = 0;
+
     enum State { Alive, Dead, Changing }
     State current = State.Alive;
 
@@ -52,6 +54,12 @@ public class Bathyscaphe : MonoBehaviour {
                     audioSource.Stop();
                     audioSource.PlayOneShot(levelEnd);
                     Invoke("LoadNextScene", 1f);
+                    break;
+                case "Key":
+                    collision.gameObject.SetActive(false);
+                    keyCount++;
+                    audioSource.PlayOneShot(levelEnd);
+                    success.Play();
                     break;
                 default:
                     current = State.Dead;
