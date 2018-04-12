@@ -106,9 +106,10 @@ GameObject:
   - component: {fileID: 82478633259451392}
   - component: {fileID: 54565014052842488}
   - component: {fileID: 114321603109127450}
+  - component: {fileID: 135291899223373976}
   m_Layer: 0
   m_Name: Bathyscaphe
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -693,7 +694,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1202140024364560}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.04, y: 1.92, z: 0}
+  m_LocalPosition: {x: -35, y: 87, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4846558201636232}
@@ -1736,6 +1737,18 @@ MonoBehaviour:
   engineFire: {fileID: 198223190694216478}
   deathExplosion: {fileID: 198078110258224448}
   success: {fileID: 198324250664916986}
+--- !u!135 &135291899223373976
+SphereCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1202140024364560}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.6
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!135 &135349847017331260
 SphereCollider:
   m_ObjectHideFlags: 1

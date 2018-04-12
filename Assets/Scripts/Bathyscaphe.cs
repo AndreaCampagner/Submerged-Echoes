@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class Bathyscaphe : MonoBehaviour {
@@ -19,16 +16,17 @@ public class Bathyscaphe : MonoBehaviour {
     [SerializeField] ParticleSystem deathExplosion;
     [SerializeField] ParticleSystem success;
 
-    private int keyCount = 0;
-
     enum State { Alive, Dead, Changing }
     State current = State.Alive;
+    public int numKeys = 0;
 
     // Use this for initialization
     void Start () {
         rigidBody = gameObject.GetComponent<Rigidbody>();
         audioSource = gameObject.GetComponent<AudioSource>();
-	}
+        InventoryManager inventory = Object.FindObjectOfType<InventoryManager>();
+        numKeys = inventory.keys;
+    }
 	
 	// Update is called once per frame
 	void Update () {
@@ -57,7 +55,9 @@ public class Bathyscaphe : MonoBehaviour {
                     break;
                 case "Key":
                     collision.gameObject.SetActive(false);
-                    keyCount++;
+                    InventoryManager inventory = Object.FindObjectOfType<InventoryManager>();
+                    inventory.keys++;
+                    numKeys++;
                     audioSource.PlayOneShot(levelEnd);
                     success.Play();
                     break;

@@ -2,19 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class TextShower : MonoBehaviour {
 
     private Text text;
     [SerializeField] List<string> textToShow;
-    private int index = 0;
+    private int index = -1;
     [SerializeField] float timeInterval;
     private bool call = true;
 
 	// Use this for initialization
 	void Start () {
         text = gameObject.GetComponentInChildren<Text>();
-        text.text = textToShow[index];
 	}
 	
 	// Update is called once per frame
@@ -32,9 +32,16 @@ public class TextShower : MonoBehaviour {
         {
             index++;
             text.text = textToShow[index];
-            call = true;
+            
         }
         else
             text.text = "";
+        call = true;
     }
+
+    public void AddText(List<string> newText)
+    {
+        textToShow.AddRange(newText);
+    }
+
 }
