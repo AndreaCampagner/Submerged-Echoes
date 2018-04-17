@@ -11,6 +11,8 @@ public class TextShower : MonoBehaviour {
     private int index = -1;
     [SerializeField] float timeInterval;
     private bool call = true;
+    [SerializeField] bool end = false;
+    [SerializeField] bool finish = false;
 
 	// Use this for initialization
 	void Start () {
@@ -28,20 +30,32 @@ public class TextShower : MonoBehaviour {
 
     void ChangeText()
     {
-        if (index < textToShow.Count -1)
+        if (index < textToShow.Count - 1)
         {
             index++;
             text.text = textToShow[index];
-            
+
         }
         else
+        {
             text.text = "";
+            if(end)
+                Initiate.Fade("EndScene", Color.black, 1.0f);
+            if (finish)
+                Initiate.Fade("StartScene", Color.black, 1.0f);
+        }
         call = true;
     }
 
     public void AddText(List<string> newText)
     {
         textToShow.AddRange(newText);
+    }
+
+    public void EndGame(List<string> endText)
+    {
+        textToShow = endText;
+        end = true;
     }
 
 }

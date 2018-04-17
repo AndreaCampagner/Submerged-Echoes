@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class Bathyscaphe : MonoBehaviour {
@@ -18,14 +19,15 @@ public class Bathyscaphe : MonoBehaviour {
 
     enum State { Alive, Dead, Changing }
     State current = State.Alive;
-    public int numKeys = 0;
+    public List<string> keys;
+    bool engine = false;
 
     // Use this for initialization
     void Start () {
         rigidBody = gameObject.GetComponent<Rigidbody>();
         audioSource = gameObject.GetComponent<AudioSource>();
         InventoryManager inventory = Object.FindObjectOfType<InventoryManager>();
-        numKeys = inventory.keys;
+        keys = inventory.keys;
     }
 	
 	// Update is called once per frame
@@ -37,10 +39,17 @@ public class Bathyscaphe : MonoBehaviour {
         }
     }
 
+    public void EndGame()
+    {
+        current = State.Dead;
+		rigidBody.useGravity = false;
+    }
+
     void OnCollisionEnter(Collision collision)
     {
         if (current == State.Alive)
         {
+            InventoryManager inventory = Object.FindObjectOfType<InventoryManager>();
             switch (collision.gameObject.tag)
             {
                 case "Friendly":
@@ -55,11 +64,13 @@ public class Bathyscaphe : MonoBehaviour {
                     break;
                 case "Key":
                     collision.gameObject.SetActive(false);
-                    InventoryManager inventory = Object.FindObjectOfType<InventoryManager>();
-                    inventory.keys++;
-                    numKeys++;
+                    Key k = collision.gameObject.GetComponent<Key>();
+                    inventory.keys.Add(k.keyName);
+                    keys.Add(k.keyName);
                     audioSource.PlayOneShot(levelEnd);
                     success.Play();
+                    if (inventory.keys.Contains("ExtraKey") && !k.keyName.Equals("ExtraKey"))
+                        Initiate.Fade("Cave", Color.black, 1.0f);
                     break;
                 default:
                     current = State.Dead;
@@ -67,22 +78,18 @@ public class Bathyscaphe : MonoBehaviour {
                     deathExplosion.Play();
                     audioSource.Stop();
                     audioSource.PlayOneShot(death);
-                    Invoke("LoadNextScene", 1f);
+                    if (inventory.keys.Contains("ExtraKey"))
+                    {
+                        Initiate.Fade("Cave", Color.black, 1.0f);
+                    }
+                    else
+                    {
+                        Initiate.Fade("FirstScene", Color.black, 1.0f);
+                        inventory.keys.Clear();
+                    }
                     break;
             }
         }
-    }
-
-    private void LoadNextScene()
-    {
-        if (current == State.Changing)
-        {
-            int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-            SceneManager.LoadScene(currentSceneIndex + 1);
-        }
-        else if (current == State.Dead)
-            SceneManager.LoadScene(0);
-        current = State.Alive;
     }
 
     private void Rotate()
@@ -103,7 +110,11 @@ public class Bathyscaphe : MonoBehaviour {
         if (Input.GetKey(KeyCode.Space))
         {
             rigidBody.AddRelativeForce(Vector3.up * thrustFactor * Time.deltaTime);
-            engineFire.Play();
+            if (!engine)
+            {
+                engineFire.Play();
+                engine = true;
+            }
             if (!audioSource.isPlaying)
                 audioSource.PlayOneShot(mainEngine);
         }
@@ -111,6 +122,7 @@ public class Bathyscaphe : MonoBehaviour {
         {
             engineFire.Stop();
             audioSource.Stop();
+            engine = false;
         }
     }
 }

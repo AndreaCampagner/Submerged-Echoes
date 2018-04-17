@@ -34,3 +34,6 @@ sysinfo.txt
 *.unitypackage
 
 Assets/PostProcessing/
+SubmergedEchoes_Data
+Assets/Simple*Scene*Fade*Load*System
+*.meta

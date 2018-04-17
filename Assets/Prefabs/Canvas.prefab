@@ -81,7 +81,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textToShow:
   - We lost contact with the Queen Mary for three days straight...
-  - The Command sent a fleet of three units to investigate... I was the third...
+  - The command sent a unit of three to investigate.
+  - I was the third
   timeInterval: 3
 --- !u!114 &114617129703197590
 MonoBehaviour:

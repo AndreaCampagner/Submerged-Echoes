@@ -4,14 +4,14 @@ using UnityEngine;
 
 class InventoryManager : MonoBehaviour
 {
-    public int keys = 0;
+	public List<string> keys =  new List<string>();
     static int instances = 0;
 
     void Awake()
     {
         instances++;
         if (instances > 1)
-            Destroy(this);
+            Destroy(this.gameObject);
         DontDestroyOnLoad(this);
     }
 }
