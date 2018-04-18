@@ -42,7 +42,11 @@ public class TextShower : MonoBehaviour {
             if(end)
                 Initiate.Fade("EndScene", Color.black, 1.0f);
             if (finish)
+            {
+                InventoryManager inventory = Object.FindObjectOfType<InventoryManager>();
+                inventory.OnEnd();
                 Initiate.Fade("StartScene", Color.black, 1.0f);
+            }
         }
         call = true;
     }

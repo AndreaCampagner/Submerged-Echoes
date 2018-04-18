@@ -1855,7 +1855,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4589926330583372, guid: d6aad51696858ee40bcff5a4773fd440, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -39
+      value: -105.5
       objectReference: {fileID: 0}
     - target: {fileID: 4589926330583372, guid: d6aad51696858ee40bcff5a4773fd440, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1909,6 +1909,14 @@ Prefab:
     - target: {fileID: 1761328100470998, guid: d6aad51696858ee40bcff5a4773fd440, type: 2}
       propertyPath: m_TagString
       value: Friendly
+      objectReference: {fileID: 0}
+    - target: {fileID: 4589926330583372, guid: d6aad51696858ee40bcff5a4773fd440, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4589926330583372, guid: d6aad51696858ee40bcff5a4773fd440, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d6aad51696858ee40bcff5a4773fd440, type: 2}
@@ -2539,6 +2547,11 @@ Prefab:
         type: 2}
       propertyPath: m_Text
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114427199036785980, guid: b5fb9b3146ca67a42b09959cb2d261c3,
+        type: 2}
+      propertyPath: timeInterval
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b5fb9b3146ca67a42b09959cb2d261c3, type: 2}

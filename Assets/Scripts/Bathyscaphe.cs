@@ -97,9 +97,11 @@ public class Bathyscaphe : MonoBehaviour {
         rigidBody.freezeRotation = true; //Manual control taken
         float rotationThisFrame = rotationFactor * Time.deltaTime;
 
-        if (Input.GetKey(KeyCode.A))
+        float value = Input.GetAxis("Horizontal");
+
+        if (value < 0)
             transform.Rotate(Vector3.forward * rotationThisFrame);
-        else if (Input.GetKey(KeyCode.D))
+        else if (value > 0)
             transform.Rotate(-Vector3.forward * rotationThisFrame);
 
         rigidBody.freezeRotation = false; //Manual control released
@@ -107,7 +109,7 @@ public class Bathyscaphe : MonoBehaviour {
 
     private void Thrust()
     {
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetButton("Jump"))
         {
             rigidBody.AddRelativeForce(Vector3.up * thrustFactor * Time.deltaTime);
             if (!engine)

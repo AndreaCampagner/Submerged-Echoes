@@ -2109,6 +2109,11 @@ Prefab:
       propertyPath: m_Text
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 114427199036785980, guid: b5fb9b3146ca67a42b09959cb2d261c3,
+        type: 2}
+      propertyPath: timeInterval
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b5fb9b3146ca67a42b09959cb2d261c3, type: 2}
   m_IsPrefabParent: 0

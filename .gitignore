@@ -37,3 +37,4 @@ Assets/PostProcessing/
 SubmergedEchoes_Data
 Assets/Simple*Scene*Fade*Load*System
 *.meta
+*.exr

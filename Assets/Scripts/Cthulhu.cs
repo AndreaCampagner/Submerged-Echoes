@@ -28,6 +28,7 @@ public class Cthulhu : MonoBehaviour {
             audioSource.clip = voice;
             audioSource.PlayOneShot(voice);
             end = true;
+            inventory.OnEnd();
         }
     }
 }
