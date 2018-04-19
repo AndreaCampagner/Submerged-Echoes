@@ -39,8 +39,12 @@ public class TextShower : MonoBehaviour {
         else
         {
             text.text = "";
-            if(end)
+            if (end)
+            {
+                PauseManager p = Object.FindObjectOfType<PauseManager>();
+                p.enabled = false;
                 Initiate.Fade("EndScene", Color.black, 1.0f);
+            }
             if (finish)
             {
                 InventoryManager inventory = Object.FindObjectOfType<InventoryManager>();
