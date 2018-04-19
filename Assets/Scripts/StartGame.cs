@@ -1,8 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class StartGame : MonoBehaviour {
+
+    [SerializeField] Button startPoint;
+
+    void Start()
+    {
+        startPoint.Select();
+    }
 
 	// Use this for initialization
 	public void OnStart()

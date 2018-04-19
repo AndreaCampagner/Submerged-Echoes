@@ -630,6 +630,94 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1866785946}
   m_Script: {fileID: 11500000, guid: 3239d8df609a3084e8312d7da688cc18, type: 3}
+--- !u!1001 &514514520
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 114940426485600558, guid: d6aad51696858ee40bcff5a4773fd440,
+        type: 2}
+      propertyPath: text.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4589926330583372, guid: d6aad51696858ee40bcff5a4773fd440, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -18.489017
+      objectReference: {fileID: 0}
+    - target: {fileID: 4589926330583372, guid: d6aad51696858ee40bcff5a4773fd440, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 31.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4589926330583372, guid: d6aad51696858ee40bcff5a4773fd440, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 12.200004
+      objectReference: {fileID: 0}
+    - target: {fileID: 4589926330583372, guid: d6aad51696858ee40bcff5a4773fd440, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4589926330583372, guid: d6aad51696858ee40bcff5a4773fd440, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4589926330583372, guid: d6aad51696858ee40bcff5a4773fd440, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4589926330583372, guid: d6aad51696858ee40bcff5a4773fd440, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4589926330583372, guid: d6aad51696858ee40bcff5a4773fd440, type: 2}
+      propertyPath: m_RootOrder
+      value: 32
+      objectReference: {fileID: 0}
+    - target: {fileID: 114940426485600558, guid: d6aad51696858ee40bcff5a4773fd440,
+        type: 2}
+      propertyPath: text.Array.data[0]
+      value: Finally I reached a new, enormous room...
+      objectReference: {fileID: 0}
+    - target: {fileID: 114940426485600558, guid: d6aad51696858ee40bcff5a4773fd440,
+        type: 2}
+      propertyPath: text.Array.data[1]
+      value: It was strange... It seemed... artificial?
+      objectReference: {fileID: 0}
+    - target: {fileID: 114940426485600558, guid: d6aad51696858ee40bcff5a4773fd440,
+        type: 2}
+      propertyPath: text.Array.data[2]
+      value: Three empty socket were in place of the statue's eyes...
+      objectReference: {fileID: 0}
+    - target: {fileID: 114940426485600558, guid: d6aad51696858ee40bcff5a4773fd440,
+        type: 2}
+      propertyPath: text.Array.data[3]
+      value: Three empty socket were in place of the statue's eyes...
+      objectReference: {fileID: 0}
+    - target: {fileID: 114940426485600558, guid: d6aad51696858ee40bcff5a4773fd440,
+        type: 2}
+      propertyPath: narrator
+      value: 
+      objectReference: {fileID: 492224016}
+    - target: {fileID: 1761328100470998, guid: d6aad51696858ee40bcff5a4773fd440, type: 2}
+      propertyPath: m_TagString
+      value: Friendly
+      objectReference: {fileID: 0}
+    - target: {fileID: 4589926330583372, guid: d6aad51696858ee40bcff5a4773fd440, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4589926330583372, guid: d6aad51696858ee40bcff5a4773fd440, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1761328100470998, guid: d6aad51696858ee40bcff5a4773fd440, type: 2}
+      propertyPath: m_Name
+      value: TextBox (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: d6aad51696858ee40bcff5a4773fd440, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &567698663
 GameObject:
   m_ObjectHideFlags: 0
@@ -920,18 +1008,6 @@ Prefab:
     - target: {fileID: 4838009997373144, guid: 1251bbbc6aec77c4380231fa16606e79, type: 2}
       propertyPath: m_RootOrder
       value: 16
-      objectReference: {fileID: 0}
-    - target: {fileID: 4838009997373144, guid: 1251bbbc6aec77c4380231fa16606e79, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 500
-      objectReference: {fileID: 0}
-    - target: {fileID: 4838009997373144, guid: 1251bbbc6aec77c4380231fa16606e79, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 500
-      objectReference: {fileID: 0}
-    - target: {fileID: 4838009997373144, guid: 1251bbbc6aec77c4380231fa16606e79, type: 2}
-      propertyPath: m_LocalScale.z
-      value: 500
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1251bbbc6aec77c4380231fa16606e79, type: 2}
@@ -1592,6 +1668,11 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 180
       objectReference: {fileID: 0}
+    - target: {fileID: 114321603109127450, guid: 03a36a6c0ca4d2e4290272bf3c958636,
+        type: 2}
+      propertyPath: thrustFactor
+      value: 30
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 03a36a6c0ca4d2e4290272bf3c958636, type: 2}
   m_IsPrefabParent: 0
@@ -1847,7 +1928,7 @@ Prefab:
     - target: {fileID: 114940426485600558, guid: d6aad51696858ee40bcff5a4773fd440,
         type: 2}
       propertyPath: text.Array.size
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4589926330583372, guid: d6aad51696858ee40bcff5a4773fd440, type: 2}
       propertyPath: m_LocalPosition.x
@@ -1855,7 +1936,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4589926330583372, guid: d6aad51696858ee40bcff5a4773fd440, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -105.5
+      value: -93
       objectReference: {fileID: 0}
     - target: {fileID: 4589926330583372, guid: d6aad51696858ee40bcff5a4773fd440, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1884,17 +1965,17 @@ Prefab:
     - target: {fileID: 114940426485600558, guid: d6aad51696858ee40bcff5a4773fd440,
         type: 2}
       propertyPath: text.Array.data[0]
-      value: Finally I reached a new, enormous room...
-      objectReference: {fileID: 0}
-    - target: {fileID: 114940426485600558, guid: d6aad51696858ee40bcff5a4773fd440,
-        type: 2}
-      propertyPath: text.Array.data[1]
       value: In the middle of it stood a huge statue...
       objectReference: {fileID: 0}
     - target: {fileID: 114940426485600558, guid: d6aad51696858ee40bcff5a4773fd440,
         type: 2}
-      propertyPath: text.Array.data[2]
+      propertyPath: text.Array.data[1]
       value: I cannot explain what it depicted... Something so alien, so utterly wrong...
+      objectReference: {fileID: 0}
+    - target: {fileID: 114940426485600558, guid: d6aad51696858ee40bcff5a4773fd440,
+        type: 2}
+      propertyPath: text.Array.data[2]
+      value: Three empty socket were in place of the statue's eyes...
       objectReference: {fileID: 0}
     - target: {fileID: 114940426485600558, guid: d6aad51696858ee40bcff5a4773fd440,
         type: 2}
@@ -2551,7 +2632,7 @@ Prefab:
     - target: {fileID: 114427199036785980, guid: b5fb9b3146ca67a42b09959cb2d261c3,
         type: 2}
       propertyPath: timeInterval
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b5fb9b3146ca67a42b09959cb2d261c3, type: 2}

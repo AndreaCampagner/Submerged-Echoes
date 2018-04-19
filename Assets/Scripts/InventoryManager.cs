@@ -13,12 +13,18 @@ class InventoryManager : MonoBehaviour
         instances++;
         if (instances > 1)
             Destroy(this.gameObject);
-        DontDestroyOnLoad(this);
+        DontDestroyOnLoad(this.gameObject);
     }
 
     public void OnEnd()
     {
-        keys.Clear();
+        //keys.Clear();
+        Destroy(this.gameObject);
+    }
+
+    void OnDestroy()
+    {
+        instances--;
     }
 }
 

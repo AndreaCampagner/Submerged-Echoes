@@ -60,7 +60,6 @@ public class Bathyscaphe : MonoBehaviour {
                     success.Play();
                     audioSource.Stop();
                     audioSource.PlayOneShot(levelEnd);
-                    Invoke("LoadNextScene", 1f);
                     break;
                 case "Key":
                     collision.gameObject.SetActive(false);
@@ -96,6 +95,7 @@ public class Bathyscaphe : MonoBehaviour {
     {
         rigidBody.freezeRotation = true; //Manual control taken
         float rotationThisFrame = rotationFactor * Time.deltaTime;
+        print(Time.deltaTime);
 
         float value = Input.GetAxis("Horizontal");
 
